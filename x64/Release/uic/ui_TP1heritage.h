@@ -30,6 +30,7 @@ public:
     QPushButton *pushButton;
     QPushButton *pushButton_2;
     QLabel *label;
+    QLabel *label_2;
     QMenuBar *menuBar;
     QMenu *menud_s;
     QToolBar *mainToolBar;
@@ -51,6 +52,9 @@ public:
         label = new QLabel(centralWidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(250, 120, 121, 51));
+        label_2 = new QLabel(centralWidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(250, 270, 47, 13));
         TP1heritageClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(TP1heritageClass);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -79,6 +83,7 @@ public:
         pushButton->setText(QCoreApplication::translate("TP1heritageClass", "lance le d\303\251", nullptr));
         pushButton_2->setText(QCoreApplication::translate("TP1heritageClass", "affiche la valeur du d\303\251", nullptr));
         label->setText(QString());
+        label_2->setText(QString());
         menud_s->setTitle(QCoreApplication::translate("TP1heritageClass", "d\303\251s", nullptr));
     } // retranslateUi
 

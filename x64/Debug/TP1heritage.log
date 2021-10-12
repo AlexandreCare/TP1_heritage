@@ -1,2 +1,2 @@
 ﻿  TP1heritage.cpp
-c:\users\care alexandre\source\repos\tp1heritage\tp1heritage\tp1heritage.cpp(16): error C3867: 'QMessageLogger::debug' : syntaxe non-standard ; utilisez '&' pour créer un pointeur vers un membre
+  TP1heritage.vcxproj -> C:\Users\Care Alexandre\source\repos\TP1heritage\x64\Debug\TP1heritage.exe
