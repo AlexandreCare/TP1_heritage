@@ -12,6 +12,7 @@ private:
     Ui::TP1heritageClass ui;
 
 public slots:
-	void onSendMessageButtonClicked();
-	//void numbers();
+	int onSendMessageButtonClicked(int u, int n);
+	int numbers();
+	void scoreboard(int n, int u, int v);
 };
