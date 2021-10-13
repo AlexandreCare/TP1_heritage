@@ -43,8 +43,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>120</y>
+      <x>260</x>
+      <y>110</y>
       <width>121</width>
       <height>51</height>
      </rect>
@@ -56,14 +56,27 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>270</y>
-      <width>47</width>
-      <height>13</height>
+      <x>260</x>
+      <y>190</y>
+      <width>101</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>180</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reset score</string>
     </property>
    </widget>
   </widget>
@@ -114,8 +127,25 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>TP1heritageClass</receiver>
+   <slot>onButtonResetClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>417</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>onSendMessageButtonClicked()</slot>
+  <slot>onButtonResetClicked()</slot>
  </slots>
 </ui>

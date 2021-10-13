@@ -19,6 +19,7 @@ private:
 public slots:
 	
 	int onSendMessageButtonClicked();
+	void onButtonResetClicked();
 	int scoreboard();
 	
 	//void onSendMessageButtonClicked();

@@ -20,6 +20,12 @@ int TP1heritage::onSendMessageButtonClicked()
 	return this->tiragede;
 }
 
+void TP1heritage::onButtonResetClicked()
+{
+	this->scoretotal = 0;
+	this->scoreboard();
+}
+
 int TP1heritage::scoreboard()
 {
 	this->scoretotal += tiragede;
@@ -27,4 +33,3 @@ int TP1heritage::scoreboard()
 	ui.label_2->setText(str); //affiche la somme des résultats du scoretotal
 	return this->scoretotal;
 }
-
