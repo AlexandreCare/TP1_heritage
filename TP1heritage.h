@@ -7,15 +7,19 @@ class TP1heritage : public QMainWindow
 
 public:
     TP1heritage(QWidget *parent = Q_NULLPTR);
+	int v;
+	int u;
+	int n;
+	int tiragede;
+	int scoretotal;
 
 private:
     Ui::TP1heritageClass ui;
 
 public slots:
-	/*
-	int onSendMessageButtonClicked(int u, int n);
-	int numbers();
-	void scoreboard(int n, int u, int v);
-	*/
-	void onSendMessageButtonClicked();
+	
+	int onSendMessageButtonClicked();
+	int scoreboard();
+	
+	//void onSendMessageButtonClicked();
 };

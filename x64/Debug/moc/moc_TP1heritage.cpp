@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_TP1heritage_t {
-    QByteArrayData data[3];
-    char stringdata0[40];
+    QByteArrayData data[4];
+    char stringdata0[51];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,11 +34,12 @@ static const qt_meta_stringdata_TP1heritage_t qt_meta_stringdata_TP1heritage = {
     {
 QT_MOC_LITERAL(0, 0, 11), // "TP1heritage"
 QT_MOC_LITERAL(1, 12, 26), // "onSendMessageButtonClicked"
-QT_MOC_LITERAL(2, 39, 0) // ""
+QT_MOC_LITERAL(2, 39, 0), // ""
+QT_MOC_LITERAL(3, 40, 10) // "scoreboard"
 
     },
     "TP1heritage\0onSendMessageButtonClicked\0"
-    ""
+    "\0scoreboard"
 };
 #undef QT_MOC_LITERAL
 
@@ -48,7 +49,7 @@ static const uint qt_meta_data_TP1heritage[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -56,10 +57,12 @@ static const uint qt_meta_data_TP1heritage[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   19,    2, 0x0a /* Public */,
+       1,    0,   24,    2, 0x0a /* Public */,
+       3,    0,   25,    2, 0x0a /* Public */,
 
  // slots: parameters
-    QMetaType::Void,
+    QMetaType::Int,
+    QMetaType::Int,
 
        0        // eod
 };
@@ -70,11 +73,13 @@ void TP1heritage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         auto *_t = static_cast<TP1heritage *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->onSendMessageButtonClicked(); break;
+        case 0: { int _r = _t->onSendMessageButtonClicked();
+            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
+        case 1: { int _r = _t->scoreboard();
+            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject TP1heritage::staticMetaObject = { {
@@ -106,13 +111,13 @@ int TP1heritage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 2)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }
