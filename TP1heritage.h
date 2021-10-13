@@ -7,6 +7,7 @@ class TP1heritage : public QMainWindow
 
 public:
     TP1heritage(QWidget *parent = Q_NULLPTR);
+	//déclaration
 	int v;
 	int u;
 	int n;
