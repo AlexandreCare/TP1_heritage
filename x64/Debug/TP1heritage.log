@@ -1,2 +1,2 @@
 ﻿  moc TP1heritage.h
-   C:\Users\Care Alexandre\source\repos\TP1heritage\TP1heritage\TP1heritage.h(40): Error: Class declaration lacks Q_OBJECT macro.
+   C:\Users\Care Alexandre\source\repos\TP1heritage\TP1heritage\TP1heritage.h(44): Error: Class declaration lacks Q_OBJECT macro.
