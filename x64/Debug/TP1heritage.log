@@ -1,5 +1,2 @@
 ﻿  moc TP1heritage.h
-  TP1heritage.cpp
-  main.cpp
-  moc_TP1heritage.cpp
-  TP1heritage.vcxproj -> C:\Users\Care Alexandre\source\repos\TP1heritage\x64\Debug\TP1heritage.exe
+   C:\Users\Care Alexandre\source\repos\TP1heritage\TP1heritage\TP1heritage.h(40): Error: Class declaration lacks Q_OBJECT macro.
