@@ -94,7 +94,16 @@
      <string>dés</string>
     </property>
    </widget>
+   <widget class="QMenu" name="menud_histo">
+    <property name="title">
+     <string>choisir</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actiond_histo"/>
+    <addaction name="actiond"/>
+   </widget>
    <addaction name="menud_s"/>
+   <addaction name="menud_histo"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -105,6 +114,16 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actiond_histo">
+   <property name="text">
+    <string>déhisto</string>
+   </property>
+  </action>
+  <action name="actiond">
+   <property name="text">
+    <string>dé</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>

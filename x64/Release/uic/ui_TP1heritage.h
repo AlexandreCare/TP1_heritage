@@ -26,6 +26,8 @@ QT_BEGIN_NAMESPACE
 class Ui_TP1heritageClass
 {
 public:
+    QAction *actiond_histo;
+    QAction *actiond;
     QWidget *centralWidget;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
@@ -34,6 +36,7 @@ public:
     QPushButton *pushButton_3;
     QMenuBar *menuBar;
     QMenu *menud_s;
+    QMenu *menud_histo;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -42,6 +45,10 @@ public:
         if (TP1heritageClass->objectName().isEmpty())
             TP1heritageClass->setObjectName(QString::fromUtf8("TP1heritageClass"));
         TP1heritageClass->resize(600, 400);
+        actiond_histo = new QAction(TP1heritageClass);
+        actiond_histo->setObjectName(QString::fromUtf8("actiond_histo"));
+        actiond = new QAction(TP1heritageClass);
+        actiond->setObjectName(QString::fromUtf8("actiond"));
         centralWidget = new QWidget(TP1heritageClass);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         pushButton = new QPushButton(centralWidget);
@@ -65,6 +72,8 @@ public:
         menuBar->setGeometry(QRect(0, 0, 600, 21));
         menud_s = new QMenu(menuBar);
         menud_s->setObjectName(QString::fromUtf8("menud_s"));
+        menud_histo = new QMenu(menuBar);
+        menud_histo->setObjectName(QString::fromUtf8("menud_histo"));
         TP1heritageClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(TP1heritageClass);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -74,6 +83,10 @@ public:
         TP1heritageClass->setStatusBar(statusBar);
 
         menuBar->addAction(menud_s->menuAction());
+        menuBar->addAction(menud_histo->menuAction());
+        menud_histo->addSeparator();
+        menud_histo->addAction(actiond_histo);
+        menud_histo->addAction(actiond);
 
         retranslateUi(TP1heritageClass);
         QObject::connect(pushButton, SIGNAL(clicked()), TP1heritageClass, SLOT(onSendMessageButtonClicked()));
@@ -85,12 +98,15 @@ public:
     void retranslateUi(QMainWindow *TP1heritageClass)
     {
         TP1heritageClass->setWindowTitle(QCoreApplication::translate("TP1heritageClass", "TP1heritage", nullptr));
+        actiond_histo->setText(QCoreApplication::translate("TP1heritageClass", "d\303\251histo", nullptr));
+        actiond->setText(QCoreApplication::translate("TP1heritageClass", "d\303\251", nullptr));
         pushButton->setText(QCoreApplication::translate("TP1heritageClass", "lance le d\303\251", nullptr));
         pushButton_2->setText(QCoreApplication::translate("TP1heritageClass", "affiche la valeur du d\303\251", nullptr));
         label->setText(QString());
         label_2->setText(QString());
         pushButton_3->setText(QCoreApplication::translate("TP1heritageClass", "Reset score", nullptr));
         menud_s->setTitle(QCoreApplication::translate("TP1heritageClass", "d\303\251s", nullptr));
+        menud_histo->setTitle(QCoreApplication::translate("TP1heritageClass", "choisir", nullptr));
     } // retranslateUi
 
 };
