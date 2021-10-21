@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>70</y>
+      <x>20</x>
+      <y>20</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -27,26 +27,13 @@
      <string>lance le dé</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>70</y>
-      <width>131</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>affiche la valeur du dé</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>110</y>
-      <width>121</width>
-      <height>51</height>
+      <x>50</x>
+      <y>50</y>
+      <width>51</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
@@ -56,10 +43,10 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>190</y>
-      <width>101</width>
-      <height>81</height>
+      <x>130</x>
+      <y>50</y>
+      <width>51</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
@@ -69,14 +56,27 @@
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>180</y>
-      <width>75</width>
-      <height>23</height>
+      <x>20</x>
+      <y>102</y>
+      <width>141</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>Reset</string>
+     <string>Réinitialisation des scores</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>20</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Score total :</string>
     </property>
    </widget>
   </widget>
