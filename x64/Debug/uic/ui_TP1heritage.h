@@ -91,6 +91,7 @@ public:
         retranslateUi(TP1heritageClass);
         QObject::connect(pushButton, SIGNAL(clicked()), TP1heritageClass, SLOT(onSendMessageButtonClicked()));
         QObject::connect(pushButton_3, SIGNAL(clicked()), TP1heritageClass, SLOT(onButtonResetClicked()));
+        QObject::connect(actiond_histo, SIGNAL(changed()), TP1heritageClass, SLOT(hide()));
 
         QMetaObject::connectSlotsByName(TP1heritageClass);
     } // setupUi
@@ -104,7 +105,7 @@ public:
         pushButton_2->setText(QCoreApplication::translate("TP1heritageClass", "affiche la valeur du d\303\251", nullptr));
         label->setText(QString());
         label_2->setText(QString());
-        pushButton_3->setText(QCoreApplication::translate("TP1heritageClass", "Reset score", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("TP1heritageClass", "Reset", nullptr));
         menud_s->setTitle(QCoreApplication::translate("TP1heritageClass", "d\303\251s", nullptr));
         menud_histo->setTitle(QCoreApplication::translate("TP1heritageClass", "choisir", nullptr));
     } // retranslateUi

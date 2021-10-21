@@ -76,7 +76,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Reset score</string>
+     <string>Reset</string>
     </property>
    </widget>
   </widget>
@@ -155,6 +155,22 @@
     <hint type="sourcelabel">
      <x>417</x>
      <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actiond_histo</sender>
+   <signal>changed()</signal>
+   <receiver>TP1heritageClass</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
     </hint>
     <hint type="destinationlabel">
      <x>299</x>

@@ -65,7 +65,7 @@ static const uint qt_meta_data_TP1heritage[] = {
  // slots: parameters
     QMetaType::Int,
     QMetaType::Void,
-    QMetaType::Int,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -79,8 +79,7 @@ void TP1heritage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 0: { int _r = _t->onSendMessageButtonClicked();
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
         case 1: _t->onButtonResetClicked(); break;
-        case 2: { int _r = _t->scoreboard();
-            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
+        case 2: _t->scoreboard(); break;
         default: ;
         }
     }
