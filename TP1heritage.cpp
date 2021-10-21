@@ -9,6 +9,8 @@ TP1heritage::TP1heritage(QWidget *parent)
     : QMainWindow(parent)
 {
     ui.setupUi(this);
+	ui.pushButton_4->setVisible(false);
+	ui.tableView->setVisible(false);
 }
 
 //permet de faire un tirage de dé quand le boutton de tirage est cliqué
@@ -17,6 +19,7 @@ int TP1heritage::onSendMessageButtonClicked()
 	this->v = QRandomGenerator::global()->bounded(1, 7); //tirage du dé
 	this->tiragede = v;
 	ui.label->setText(QString::number(v)); //afichage du score obtenue
+	ui.tableView;
 	this->scoreboard(); //on transmet le score obtenue au score total
 	this->scoretotal += tiragede; //ajout du score obtenue au total déja obtenue
 	return this->tiragede;
@@ -39,19 +42,18 @@ void TP1heritage::scoreboard()
 	ui.label_2->setText(str); //affiche la somme des résultats du scoretotal
 }
 
-/*
-int heritage::jet()
+void TP1heritage::onButtonHidedeClicked()
 {
-	this->score = QRandomGenerator::global()->bounded(1, 7);
-	ui.label->setText(QString::number(score));
-	this->histoscoreboard();
-	return this->score;
+	//cache les boutons et les labels pour le dé simple
+	ui.pushButton_4->setVisible(true);
+	ui.tableView->setVisible(true);
+
+	//révéle les boutons et les labels pour le dé avec historique
+
 }
 
-int heritage::histoscoreboard()
+void TP1heritage::onButtonHidedehistoClicked()
 {
-	this->score += scoretotal; //ajout du score obtenue au total déja obtenue
-	QString str = QString::number(this->score);
-	//tableau (base)
+	ui.pushButton_4->setVisible(false);
+	ui.tableView->setVisible(false);
 }
-*/

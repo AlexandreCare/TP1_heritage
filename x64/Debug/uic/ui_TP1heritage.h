@@ -12,12 +12,14 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -34,6 +36,9 @@ public:
     QLabel *label_2;
     QPushButton *pushButton_3;
     QLabel *label_3;
+    QPushButton *pushButton_2;
+    QPushButton *pushButton_4;
+    QTableView *tableView;
     QMenuBar *menuBar;
     QMenu *menud_s;
     QMenu *menud_histo;
@@ -44,7 +49,7 @@ public:
     {
         if (TP1heritageClass->objectName().isEmpty())
             TP1heritageClass->setObjectName(QString::fromUtf8("TP1heritageClass"));
-        TP1heritageClass->resize(600, 400);
+        TP1heritageClass->resize(532, 400);
         actiond_histo = new QAction(TP1heritageClass);
         actiond_histo->setObjectName(QString::fromUtf8("actiond_histo"));
         actiond = new QAction(TP1heritageClass);
@@ -53,23 +58,32 @@ public:
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(20, 20, 75, 23));
+        pushButton->setGeometry(QRect(20, 40, 75, 23));
         label = new QLabel(centralWidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(50, 50, 51, 41));
+        label->setGeometry(QRect(50, 70, 51, 41));
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(130, 50, 51, 41));
+        label_2->setGeometry(QRect(130, 70, 51, 41));
         pushButton_3 = new QPushButton(centralWidget);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(20, 102, 141, 21));
+        pushButton_3->setGeometry(QRect(20, 122, 141, 21));
         label_3 = new QLabel(centralWidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(110, 20, 81, 16));
+        label_3->setGeometry(QRect(110, 40, 81, 16));
+        pushButton_2 = new QPushButton(centralWidget);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setGeometry(QRect(20, 10, 75, 23));
+        pushButton_4 = new QPushButton(centralWidget);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        pushButton_4->setGeometry(QRect(20, 10, 75, 23));
+        tableView = new QTableView(centralWidget);
+        tableView->setObjectName(QString::fromUtf8("tableView"));
+        tableView->setGeometry(QRect(180, 10, 151, 192));
         TP1heritageClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(TP1heritageClass);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 600, 21));
+        menuBar->setGeometry(QRect(0, 0, 532, 21));
         menud_s = new QMenu(menuBar);
         menud_s->setObjectName(QString::fromUtf8("menud_s"));
         menud_histo = new QMenu(menuBar);
@@ -84,14 +98,12 @@ public:
 
         menuBar->addAction(menud_s->menuAction());
         menuBar->addAction(menud_histo->menuAction());
-        menud_histo->addSeparator();
-        menud_histo->addAction(actiond_histo);
-        menud_histo->addAction(actiond);
 
         retranslateUi(TP1heritageClass);
         QObject::connect(pushButton, SIGNAL(clicked()), TP1heritageClass, SLOT(onSendMessageButtonClicked()));
         QObject::connect(pushButton_3, SIGNAL(clicked()), TP1heritageClass, SLOT(onButtonResetClicked()));
-        QObject::connect(actiond_histo, SIGNAL(changed()), TP1heritageClass, SLOT(hide()));
+        QObject::connect(pushButton_2, SIGNAL(clicked()), TP1heritageClass, SLOT(onButtonHidedeClicked()));
+        QObject::connect(pushButton_4, SIGNAL(clicked()), TP1heritageClass, SLOT(onButtonHidedehistoClicked()));
 
         QMetaObject::connectSlotsByName(TP1heritageClass);
     } // setupUi
@@ -106,6 +118,8 @@ public:
         label_2->setText(QString());
         pushButton_3->setText(QCoreApplication::translate("TP1heritageClass", "R\303\251initialisation des scores", nullptr));
         label_3->setText(QCoreApplication::translate("TP1heritageClass", "Score total :", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("TP1heritageClass", "D\303\251histo", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("TP1heritageClass", "D\303\251", nullptr));
         menud_s->setTitle(QCoreApplication::translate("TP1heritageClass", "d\303\251s", nullptr));
         menud_histo->setTitle(QCoreApplication::translate("TP1heritageClass", "choisir", nullptr));
     } // retranslateUi

@@ -24,22 +24,7 @@ public slots:
 	//int de::operator +=(onSendMessageButtonClicked());
 
 	void scoreboard();
-	
+	void onButtonHidedeClicked();
+	void onButtonHidedehistoClicked();
 	//void onSendMessageButtonClicked();
 };
-/*
-class heritage : public TP1heritage // classe fille
-{
-	
-public :
-	int score;
-
-private :
-	Ui::TP1heritageClass ui;
-
-public slots:
-	int jet(); //simule le jet d’un dé
-	int histoscoreboard();
-	//void jet(int n); //simule le jet de n dé
-};
-*/

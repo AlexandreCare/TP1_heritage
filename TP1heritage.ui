@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
+    <width>532</width>
     <height>400</height>
    </rect>
   </property>
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>20</y>
+      <y>40</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -31,7 +31,7 @@
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>50</y>
+      <y>70</y>
       <width>51</width>
       <height>41</height>
      </rect>
@@ -44,7 +44,7 @@
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>50</y>
+      <y>70</y>
       <width>51</width>
       <height>41</height>
      </rect>
@@ -57,7 +57,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>102</y>
+      <y>122</y>
       <width>141</width>
       <height>21</height>
      </rect>
@@ -70,7 +70,7 @@
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>20</y>
+      <y>40</y>
       <width>81</width>
       <height>16</height>
      </rect>
@@ -79,13 +79,49 @@
      <string>Score total :</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Déhisto</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Dé</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>10</y>
+      <width>151</width>
+      <height>192</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>600</width>
+     <width>532</width>
      <height>21</height>
     </rect>
    </property>
@@ -98,9 +134,6 @@
     <property name="title">
      <string>choisir</string>
     </property>
-    <addaction name="separator"/>
-    <addaction name="actiond_histo"/>
-    <addaction name="actiond"/>
    </widget>
    <addaction name="menud_s"/>
    <addaction name="menud_histo"/>
@@ -163,17 +196,33 @@
    </hints>
   </connection>
   <connection>
-   <sender>actiond_histo</sender>
-   <signal>changed()</signal>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
    <receiver>TP1heritageClass</receiver>
-   <slot>hide()</slot>
+   <slot>onButtonHidedeClicked()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
+     <x>57</x>
+     <y>54</y>
     </hint>
     <hint type="destinationlabel">
      <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>TP1heritageClass</receiver>
+   <slot>onButtonHidedehistoClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>57</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>265</x>
      <y>199</y>
     </hint>
    </hints>
@@ -182,5 +231,7 @@
  <slots>
   <slot>onSendMessageButtonClicked()</slot>
   <slot>onButtonResetClicked()</slot>
+  <slot>onButtonHidedeClicked()</slot>
+  <slot>onButtonHidedehistoClicked()</slot>
  </slots>
 </ui>
