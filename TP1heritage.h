@@ -26,5 +26,6 @@ public slots:
 	void scoreboard();
 	void onButtonHidedeClicked();
 	void onButtonHidedehistoClicked();
+	void histo();
 	//void onSendMessageButtonClicked();
 };
