@@ -15,7 +15,6 @@ TP1heritage::TP1heritage(QWidget *parent)
 
 	this->ui.tableWidget->setRowCount(10);
 	this->ui.tableWidget->setColumnCount(1);
-
 }
 
 //permet de faire un tirage de dé quand le boutton de tirage est cliqué
@@ -27,7 +26,7 @@ int TP1heritage::onSendMessageButtonClicked()
 	ui.tableWidget;
 	this->scoreboard(); //on transmet le score obtenue au score total
 	this->scoretotal += tiragede; //ajout du score obtenue au total déja obtenue
-	this->histo();
+	
 	return this->tiragede;
 }
 
@@ -38,23 +37,24 @@ void TP1heritage::onButtonResetClicked()
 	this->v = 0;
 	ui.label->setText(QString::number(v));
 	this->scoreboard();
+	
 }
 
 //permet d'avoir le total de tout les tirages
 void TP1heritage::scoreboard()
 {
+	this->histo();
 	QString str = QString::number(scoretotal);
 	ui.label_2->setText(str); //affiche la somme des résultats du scoretotal
 }
 
 void TP1heritage::histo()
 {
-
-	for (int tiragede = 0; tiragede < 10 ; ++tiragede) {
-
+	int i = 0;
+	
+	for (i; i < 10; i++){
 		QTableWidgetItem *value = new QTableWidgetItem(QString::number(tiragede));
-		ui.tableWidget->setItem(0, 0, value);
-
+		ui.tableWidget->setItem(i, 0, value);
 	}
 }
 
