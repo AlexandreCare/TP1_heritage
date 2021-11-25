@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_TP1heritage_t {
-    QByteArrayData data[7];
-    char stringdata0[121];
+    QByteArrayData data[9];
+    char stringdata0[115];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -37,13 +37,15 @@ QT_MOC_LITERAL(1, 12, 26), // "onSendMessageButtonClicked"
 QT_MOC_LITERAL(2, 39, 0), // ""
 QT_MOC_LITERAL(3, 40, 20), // "onButtonResetClicked"
 QT_MOC_LITERAL(4, 61, 10), // "scoreboard"
-QT_MOC_LITERAL(5, 72, 21), // "onButtonHidedeClicked"
-QT_MOC_LITERAL(6, 94, 26) // "onButtonHidedehistoClicked"
+QT_MOC_LITERAL(5, 72, 5), // "histo"
+QT_MOC_LITERAL(6, 78, 2), // "de"
+QT_MOC_LITERAL(7, 81, 7), // "dehisto"
+QT_MOC_LITERAL(8, 89, 25) // "onButtonResethistoClicked"
 
     },
     "TP1heritage\0onSendMessageButtonClicked\0"
-    "\0onButtonResetClicked\0scoreboard\0"
-    "onButtonHidedeClicked\0onButtonHidedehistoClicked"
+    "\0onButtonResetClicked\0scoreboard\0histo\0"
+    "de\0dehisto\0onButtonResethistoClicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -53,7 +55,7 @@ static const uint qt_meta_data_TP1heritage[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -61,14 +63,18 @@ static const uint qt_meta_data_TP1heritage[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   39,    2, 0x0a /* Public */,
-       3,    0,   40,    2, 0x0a /* Public */,
-       4,    0,   41,    2, 0x0a /* Public */,
-       5,    0,   42,    2, 0x0a /* Public */,
-       6,    0,   43,    2, 0x0a /* Public */,
+       1,    0,   49,    2, 0x0a /* Public */,
+       3,    0,   50,    2, 0x0a /* Public */,
+       4,    0,   51,    2, 0x0a /* Public */,
+       5,    0,   52,    2, 0x0a /* Public */,
+       6,    0,   53,    2, 0x0a /* Public */,
+       7,    0,   54,    2, 0x0a /* Public */,
+       8,    0,   55,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Int,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -87,8 +93,10 @@ void TP1heritage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
         case 1: _t->onButtonResetClicked(); break;
         case 2: _t->scoreboard(); break;
-        case 3: _t->onButtonHidedeClicked(); break;
-        case 4: _t->onButtonHidedehistoClicked(); break;
+        case 3: _t->histo(); break;
+        case 4: _t->de(); break;
+        case 5: _t->dehisto(); break;
+        case 6: _t->onButtonResethistoClicked(); break;
         default: ;
         }
     }
@@ -123,13 +131,13 @@ int TP1heritage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 7)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 5;
+        _id -= 7;
     }
     return _id;
 }

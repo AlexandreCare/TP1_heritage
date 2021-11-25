@@ -24,8 +24,9 @@ public slots:
 	//int de::operator +=(onSendMessageButtonClicked());
 
 	void scoreboard();
-	void onButtonHidedeClicked();
-	void onButtonHidedehistoClicked();
 	void histo();
+	void de();
+	void dehisto();
+	void onButtonResethistoClicked();
 	//void onSendMessageButtonClicked();
 };

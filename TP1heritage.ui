@@ -79,32 +79,6 @@
      <string>Score total :</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Déhisto</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_4">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Dé</string>
-    </property>
-   </widget>
    <widget class="QTableWidget" name="tableWidget">
     <property name="geometry">
      <rect>
@@ -113,6 +87,19 @@
       <width>131</width>
       <height>192</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>150</y>
+      <width>141</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Réinitialisé le tableau</string>
     </property>
    </widget>
   </widget>
@@ -127,12 +114,14 @@
    </property>
    <widget class="QMenu" name="menud_s">
     <property name="title">
-     <string>dés</string>
+     <string>choisir</string>
     </property>
+    <addaction name="dehisto"/>
+    <addaction name="de"/>
    </widget>
    <widget class="QMenu" name="menud_histo">
     <property name="title">
-     <string>choisir</string>
+     <string>.</string>
     </property>
    </widget>
    <addaction name="menud_s"/>
@@ -153,6 +142,16 @@
    </property>
   </action>
   <action name="actiond">
+   <property name="text">
+    <string>dé</string>
+   </property>
+  </action>
+  <action name="dehisto">
+   <property name="text">
+    <string>dehisto</string>
+   </property>
+  </action>
+  <action name="de">
    <property name="text">
     <string>dé</string>
    </property>
@@ -196,30 +195,46 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_2</sender>
-   <signal>clicked()</signal>
+   <sender>dehisto</sender>
+   <signal>triggered()</signal>
    <receiver>TP1heritageClass</receiver>
-   <slot>onButtonHidedeClicked()</slot>
+   <slot>dehisto()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>57</x>
-     <y>54</y>
+     <x>-1</x>
+     <y>-1</y>
     </hint>
     <hint type="destinationlabel">
-     <x>299</x>
+     <x>265</x>
      <y>199</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_4</sender>
+   <sender>de</sender>
+   <signal>triggered()</signal>
+   <receiver>TP1heritageClass</receiver>
+   <slot>de()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>265</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
    <signal>clicked()</signal>
    <receiver>TP1heritageClass</receiver>
    <slot>onButtonHidedehistoClicked()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>57</x>
-     <y>54</y>
+     <x>90</x>
+     <y>194</y>
     </hint>
     <hint type="destinationlabel">
      <x>265</x>
@@ -233,5 +248,7 @@
   <slot>onButtonResetClicked()</slot>
   <slot>onButtonHidedeClicked()</slot>
   <slot>onButtonHidedehistoClicked()</slot>
+  <slot>dehisto()</slot>
+  <slot>de()</slot>
  </slots>
 </ui>

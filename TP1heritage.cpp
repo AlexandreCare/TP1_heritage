@@ -10,8 +10,8 @@ TP1heritage::TP1heritage(QWidget *parent)
     : QMainWindow(parent)
 {
     ui.setupUi(this);
-	ui.pushButton_4->setVisible(false);
 	ui.tableWidget->setVisible(false);
+	ui.pushButton_2->setVisible(false);
 
 	this->ui.tableWidget->setRowCount(10);
 	this->ui.tableWidget->setColumnCount(1);
@@ -53,20 +53,35 @@ void TP1heritage::histo()
 	int i = 0;
 	
 	for (i; i < 10; i++){
+
 		QTableWidgetItem *value = new QTableWidgetItem(QString::number(tiragede));
 		ui.tableWidget->setItem(i, 0, value);
+
 	}
 }
 
-void TP1heritage::onButtonHidedeClicked()
+void TP1heritage::de()
 {
-	//cache les boutons et les labels pour le dé simple
-	ui.pushButton_4->setVisible(true);
+	ui.pushButton_2->setVisible(false);
+	ui.tableWidget->setVisible(false);
+}
+void TP1heritage::dehisto()
+{
+	ui.pushButton_2->setVisible(true);
 	ui.tableWidget->setVisible(true);
 }
 
-void TP1heritage::onButtonHidedehistoClicked()
+void TP1heritage::onButtonResethistoClicked()
 {
-	ui.pushButton_4->setVisible(false);
-	ui.tableWidget->setVisible(false);
+
+	int tirage = 0;
+
+	int i = 0;
+
+	for (i; i < 10; i++) {
+
+		QTableWidgetItem *value = new QTableWidgetItem(QString::number(tirage));
+		ui.tableWidget->setItem(i++, 0, value);
+
+	}
 }
